@@ -9,7 +9,7 @@ const server = new McpServer({
     version: "1.0.0"
 });
 
-// ... set up server resources, tools, and prompts ...
+
 
 const app = express();
 
@@ -44,8 +44,7 @@ server.tool(
 })
 
 
-// to support multiple simultaneous connections we have a lookup object from
-// sessionId to transport
+
 const transports = {};
 
 app.get("/sse", async (req, res) => {
